@@ -1,0 +1,85 @@
+
+# ISO 9001 Control Manifest (YAML only)
+# Version: 2015
+# Clause: Operation
+# NOTE: This file paraphrases control intents; it does not reproduce standard text.
+# Fields: id, title, intent, criteria, evidence, frequency, owner, tags
+standard: "ISO 9001"
+version: "2015"
+clause: "Operation"
+controls:
+  - id: "QMS-8.1"
+    title: "Operational planning and control"
+    intent: "Plan, implement and control processes to meet requirements."
+    criteria:
+      - "Control criteria set"
+      - "Records retained"
+    evidence:
+      - "operational_controls.yml"
+    frequency: "monthly"
+    owner: "Process Owner"
+    tags: ["SHEQ", "ISO 9001", "GitHub-Actions"]
+  - id: "QMS-8.2"
+    title: "Requirements for products and services"
+    intent: "Determine customer requirements, review and change control."
+    criteria:
+      - "Contract review carried out"
+    evidence:
+      - "contract_reviews.csv"
+    frequency: "per-order"
+    owner: "Process Owner"
+    tags: ["SHEQ", "ISO 9001", "GitHub-Actions"]
+  - id: "QMS-8.3"
+    title: "Design and development"
+    intent: "Plan and control design and development where applicable."
+    criteria:
+      - "Design inputs/outputs"
+      - "Verification & validation"
+    evidence:
+      - "design_records/"
+    frequency: "per-project"
+    owner: "Process Owner"
+    tags: ["SHEQ", "ISO 9001", "GitHub-Actions"]
+  - id: "QMS-8.4"
+    title: "Externally provided processes, products and services"
+    intent: "Control suppliers and outsourced processes."
+    criteria:
+      - "Approved supplier list"
+      - "Performance monitoring"
+    evidence:
+      - "supplier_register.csv"
+    frequency: "quarterly"
+    owner: "Process Owner"
+    tags: ["SHEQ", "ISO 9001", "GitHub-Actions"]
+  - id: "QMS-8.5"
+    title: "Production and service provision"
+    intent: "Controlled conditions and release."
+    criteria:
+      - "Work instructions available"
+      - "Identification & traceability"
+    evidence:
+      - "work_instructions/"
+    frequency: "monthly"
+    owner: "Process Owner"
+    tags: ["SHEQ", "ISO 9001", "GitHub-Actions"]
+  - id: "QMS-8.6"
+    title: "Release of products and services"
+    intent: "Ensure release only after planned arrangements."
+    criteria:
+      - "Evidence of conformity"
+    evidence:
+      - "release_records.csv"
+    frequency: "per-batch"
+    owner: "Process Owner"
+    tags: ["SHEQ", "ISO 9001", "GitHub-Actions"]
+  - id: "QMS-8.7"
+    title: "Control of nonconforming outputs"
+    intent: "Identify and control nonconformities."
+    criteria:
+      - "NCR log maintained"
+      - "Disposition authorised"
+    evidence:
+      - "ncr_log.csv"
+    frequency: "as-needed"
+    owner: "Process Owner"
+    tags: ["SHEQ", "ISO 9001", "GitHub-Actions"]

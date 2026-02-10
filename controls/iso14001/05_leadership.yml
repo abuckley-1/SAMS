@@ -1,0 +1,42 @@
+
+# ISO 14001 Control Manifest (YAML only)
+# Version: 2015
+# Clause: Leadership
+# NOTE: This file paraphrases control intents; it does not reproduce standard text.
+# Fields: id, title, intent, criteria, evidence, frequency, owner, tags
+standard: "ISO 14001"
+version: "2015"
+clause: "Leadership"
+controls:
+  - id: "EMS-5.1"
+    title: "Leadership and commitment"
+    intent: "Top management leadership for EMS."
+    criteria:
+      - "Policy alignment"
+      - "Resources provided"
+    evidence:
+      - "ems_mgmt_review.pdf"
+    frequency: "annual"
+    owner: "Process Owner"
+    tags: ["SHEQ", "ISO 14001", "GitHub-Actions"]
+  - id: "EMS-5.2"
+    title: "Environmental policy"
+    intent: "Establish and maintain environmental policy."
+    criteria:
+      - "Policy available"
+      - "Communicated"
+    evidence:
+      - "environmental_policy.pdf"
+    frequency: "biennial"
+    owner: "Process Owner"
+    tags: ["SHEQ", "ISO 14001", "GitHub-Actions"]
+  - id: "EMS-5.3"
+    title: "Roles and responsibilities"
+    intent: "Assign EMS responsibilities."
+    criteria:
+      - "RACI updated"
+    evidence:
+      - "ems_raci.xlsx"
+    frequency: "annual"
+    owner: "Process Owner"
+    tags: ["SHEQ", "ISO 14001", "GitHub-Actions"]

@@ -1,0 +1,46 @@
+
+# ISO 9001 Control Manifest (YAML only)
+# Version: 2015
+# Clause: Leadership
+# NOTE: This file paraphrases control intents; it does not reproduce standard text.
+# Fields: id, title, intent, criteria, evidence, frequency, owner, tags
+standard: "ISO 9001"
+version: "2015"
+clause: "Leadership"
+controls:
+  - id: "QMS-5.1"
+    title: "Leadership and commitment"
+    intent: "Top management demonstrates leadership and accountability for QMS."
+    criteria:
+      - "Objectives aligned with strategy"
+      - "Resources provided"
+      - "Promotion of process approach"
+    evidence:
+      - "management_review_minutes.pdf"
+    frequency: "annual"
+    owner: "Process Owner"
+    tags: ["SHEQ", "ISO 9001", "GitHub-Actions"]
+  - id: "QMS-5.2"
+    title: "Quality policy"
+    intent: "Establish, implement and communicate a suitable quality policy."
+    criteria:
+      - "Policy approved"
+      - "Communicated to staff"
+      - "Available to interested parties"
+    evidence:
+      - "quality_policy.pdf"
+    frequency: "biennial"
+    owner: "Process Owner"
+    tags: ["SHEQ", "ISO 9001", "GitHub-Actions"]
+  - id: "QMS-5.3"
+    title: "Organisational roles, responsibilities and authorities"
+    intent: "Assign and communicate responsibilities for relevant roles."
+    criteria:
+      - "RACI defined"
+      - "Authorities assigned"
+    evidence:
+      - "org_chart.png"
+      - "raci_matrix.xlsx"
+    frequency: "annual"
+    owner: "Process Owner"
+    tags: ["SHEQ", "ISO 9001", "GitHub-Actions"]

@@ -1,0 +1,32 @@
+
+# ISO 14001 Control Manifest (YAML only)
+# Version: 2015
+# Clause: Operation
+# NOTE: This file paraphrases control intents; it does not reproduce standard text.
+# Fields: id, title, intent, criteria, evidence, frequency, owner, tags
+standard: "ISO 14001"
+version: "2015"
+clause: "Operation"
+controls:
+  - id: "EMS-8.1"
+    title: "Operational planning & control"
+    intent: "Control operations associated with significant aspects."
+    criteria:
+      - "Ops controls documented"
+    evidence:
+      - "operational_controls_env.yml"
+    frequency: "monthly"
+    owner: "Process Owner"
+    tags: ["SHEQ", "ISO 14001", "GitHub-Actions"]
+  - id: "EMS-8.2"
+    title: "Emergency preparedness & response"
+    intent: "Prepare for and respond to environmental emergencies."
+    criteria:
+      - "Plans tested"
+      - "Drills recorded"
+    evidence:
+      - "epr_plan.pdf"
+      - "drill_log.csv"
+    frequency: "annual"
+    owner: "Process Owner"
+    tags: ["SHEQ", "ISO 14001", "GitHub-Actions"]

@@ -1,0 +1,51 @@
+
+# ISO 14001 Control Manifest (YAML only)
+# Version: 2015
+# Clause: Context of the organisation
+# NOTE: This file paraphrases control intents; it does not reproduce standard text.
+# Fields: id, title, intent, criteria, evidence, frequency, owner, tags
+standard: "ISO 14001"
+version: "2015"
+clause: "Context of the organisation"
+controls:
+  - id: "EMS-4.1"
+    title: "Understanding the organisation and its context"
+    intent: "Establish environmental context and issues."
+    criteria:
+      - "Environmental issues identified"
+      - "Stakeholder needs captured"
+    evidence:
+      - "env_context_register.csv"
+    frequency: "annual"
+    owner: "Process Owner"
+    tags: ["SHEQ", "ISO 14001", "GitHub-Actions"]
+  - id: "EMS-4.2"
+    title: "Interested parties and obligations"
+    intent: "Identify interested parties and compliance obligations."
+    criteria:
+      - "Compliance obligations list"
+    evidence:
+      - "obligations_register.csv"
+    frequency: "annual"
+    owner: "Process Owner"
+    tags: ["SHEQ", "ISO 14001", "GitHub-Actions"]
+  - id: "EMS-4.3"
+    title: "Scope of EMS"
+    intent: "Define EMS scope."
+    criteria:
+      - "Scope approved"
+    evidence:
+      - "ems_scope.md"
+    frequency: "annual"
+    owner: "Process Owner"
+    tags: ["SHEQ", "ISO 14001", "GitHub-Actions"]
+  - id: "EMS-4.4"
+    title: "EMS processes"
+    intent: "Define EMS processes and interactions."
+    criteria:
+      - "Process map complete"
+    evidence:
+      - "ems_process_map.drawio"
+    frequency: "annual"
+    owner: "Process Owner"
+    tags: ["SHEQ", "ISO 14001", "GitHub-Actions"]

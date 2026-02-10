@@ -1,0 +1,55 @@
+
+# RM3 Control Manifest (YAML only)
+# Version: 2019
+# Clause: SP
+# NOTE: This file paraphrases control intents; it does not reproduce standard text.
+# Fields: id, title, intent, criteria, evidence, frequency, owner, tags
+standard: "RM3"
+version: "2019"
+clause: "SP"
+controls:
+  - id: "RM3-SP1"
+    title: "Strategy & policy alignment"
+    intent: "Documented policy aligned to organisational goals."
+    criteria:
+      - "Policy approved"
+      - "Roles defined"
+      - "KPIs set"
+    evidence:
+      - "policy.pdf"
+      - "kpi_register.csv"
+    frequency: "annual"
+    owner: "Process Owner"
+    tags: ["SHEQ", "RM3", "GitHub-Actions"]
+  - id: "RM3-SP2"
+    title: "Leadership commitment"
+    intent: "Demonstrable leadership for risk management and safety culture."
+    criteria:
+      - "Leadership walkrounds"
+      - "Briefings completed"
+    evidence:
+      - "leadership_walkround_log.csv"
+    frequency: "quarterly"
+    owner: "Process Owner"
+    tags: ["SHEQ", "RM3", "GitHub-Actions"]
+  - id: "RM3-SP3"
+    title: "Safety performance objectives"
+    intent: "Set and monitor safety objectives."
+    criteria:
+      - "Targets set"
+      - "KPI review"
+    evidence:
+      - "safety_objectives.csv"
+    frequency: "quarterly"
+    owner: "Process Owner"
+    tags: ["SHEQ", "RM3", "GitHub-Actions"]
+  - id: "RM3-SP4"
+    title: "Accountabilities"
+    intent: "Clear accountabilities for safety roles."
+    criteria:
+      - "RACI approved"
+    evidence:
+      - "safety_raci.xlsx"
+    frequency: "annual"
+    owner: "Process Owner"
+    tags: ["SHEQ", "RM3", "GitHub-Actions"]

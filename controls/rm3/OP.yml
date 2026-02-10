@@ -1,0 +1,51 @@
+
+# RM3 Control Manifest (YAML only)
+# Version: 2019
+# Clause: OP
+# NOTE: This file paraphrases control intents; it does not reproduce standard text.
+# Fields: id, title, intent, criteria, evidence, frequency, owner, tags
+standard: "RM3"
+version: "2019"
+clause: "OP"
+controls:
+  - id: "RM3-OP1"
+    title: "Risk assessment & control"
+    intent: "Identify hazards, assess risks, implement controls."
+    criteria:
+      - "Risk assessments current"
+    evidence:
+      - "ra_library/"
+    frequency: "quarterly"
+    owner: "Process Owner"
+    tags: ["SHEQ", "RM3", "GitHub-Actions"]
+  - id: "RM3-OP2"
+    title: "Operational control"
+    intent: "Procedures and standards implemented and monitored."
+    criteria:
+      - "Procedures up to date"
+    evidence:
+      - "ops_procedures/"
+    frequency: "monthly"
+    owner: "Process Owner"
+    tags: ["SHEQ", "RM3", "GitHub-Actions"]
+  - id: "RM3-OP3"
+    title: "Contractor management"
+    intent: "Control of contractors and suppliers."
+    criteria:
+      - "Pre-qualification"
+      - "Performance reviews"
+    evidence:
+      - "contractor_register.csv"
+    frequency: "quarterly"
+    owner: "Process Owner"
+    tags: ["SHEQ", "RM3", "GitHub-Actions"]
+  - id: "RM3-OP4"
+    title: "Emergency management"
+    intent: "Plan and exercise emergencies."
+    criteria:
+      - "Exercises recorded"
+    evidence:
+      - "emergency_exercises.csv"
+    frequency: "annual"
+    owner: "Process Owner"
+    tags: ["SHEQ", "RM3", "GitHub-Actions"]
