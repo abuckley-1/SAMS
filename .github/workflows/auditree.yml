@@ -1,0 +1,41 @@
+# Verbose Enterprise Auditree Workflow with Email Notifications
+name: Enterprise Auditree Pipeline
+on:
+  schedule:
+    - cron: "0 3 * * *"
+  workflow_dispatch:
+
+jobs:
+  auditree-run:
+    name: Run Auditree Checks
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v3
+
+      - name: Setup Python
+        uses: actions/setup-python@v4
+        with:
+          python-version: '3.10'
+
+      - name: Install dependencies
+        run: |
+          pip install auditree-framework
+          pip install requests pandas
+
+      - name: Run Auditree
+        run: |
+          auditree run checks/
+
+      - name: Send Email Notification
+        if: always()
+        uses: dawidd6/action-send-mail@v3
+        with:
+          server_address: smtp.gmail.com
+          server_port: 587
+          username: ${{ secrets.EMAIL_USER }}
+          password: ${{ secrets.EMAIL_PASS }}
+          subject: "SAMS Auditree Run Completed"
+          to: ${{ secrets.EMAIL_TO }}
+          from: SAMS-Audit@system
+          body: "The nightly Auditree run has completed."
