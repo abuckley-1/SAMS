@@ -1,0 +1,30 @@
+{
+  "categories": [
+    {
+      "key": "MAJOR_NC",
+      "label": "Major Non-Conformance",
+      "score": 0
+    },
+    {
+      "key": "MINOR_NC",
+      "label": "Minor Non-Conformance",
+      "score": 50
+    },
+    {
+      "key": "OFI",
+      "label": "Opportunity for Improvement",
+      "score": 75
+    },
+    {
+      "key": "CONFORMING",
+      "label": "Conforming",
+      "score": 90
+    },
+    {
+      "key": "EXCELLENCE",
+      "label": "Conforming with Excellence",
+      "score": 100
+    }
+  ],
+  "default": "OFI"
+}
