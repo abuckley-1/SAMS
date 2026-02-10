@@ -1,0 +1,47 @@
+# Verbose Enterprise Evidence Sync Workflow with Email Notifications
+name: Evidence Sync Pipeline
+on:
+  schedule:
+    - cron: "30 3 * * *"
+  workflow_dispatch:
+
+jobs:
+  evidence-sync:
+    name: Sync Evidence
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v3
+
+      - name: Setup Python
+        uses: actions/setup-python@v4
+        with:
+          python-version: '3.10'
+
+      - name: Install dependencies
+        run: |
+          pip install pandas requests
+
+      - name: Run Evidence Collectors
+        run: |
+          python scripts/fetch_incident_data.py
+          python scripts/fetch_training_data.py
+
+      - name: Upload Evidence Artifact
+        uses: actions/upload-artifact@v3
+        with:
+          name: evidence_artifact
+          path: evidence/
+
+      - name: Send Email Notification
+        if: always()
+        uses: dawidd6/action-send-mail@v3
+        with:
+          server_address: smtp.gmail.com
+          server_port: 587
+          username: ${{ secrets.EMAIL_USER }}
+          password: ${{ secrets.EMAIL_PASS }}
+          subject: "SAMS Evidence Sync Completed"
+          to: ${{ secrets.EMAIL_TO }}
+          from: SAMS-Audit@system
+          body: "The nightly evidence sync has completed."
