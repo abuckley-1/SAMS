@@ -1,0 +1,43 @@
+# Verbose Enterprise Policy Engine Workflow with Email Notifications (Regenerated)
+name: Policy Engine Pipeline
+on:
+  schedule:
+    - cron: "0 4 * * *"
+  workflow_dispatch:
+
+jobs:
+  policy-eval:
+    name: Evaluate Rego Policies
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v3
+
+      - name: Setup OPA
+        run: |
+          curl -L -o opa https://openpolicyagent.org/downloads/latest/opa_linux_amd64
+          chmod +x opa
+
+      - name: Evaluate Policies
+        run: |
+          mkdir -p results
+          ./opa eval -i evidence/sample_incidents.json -d policies/ -f pretty "data" > results/policy_results.txt
+
+      - name: Upload Policy Results
+        uses: actions/upload-artifact@v3
+        with:
+          name: policy_results
+          path: results/
+
+      - name: Send Email Notification
+        if: always()
+        uses: dawidd6/action-send-mail@v3
+        with:
+          server_address: smtp.gmail.com
+          server_port: 587
+          username: ${{ secrets.EMAIL_USER }}
+          password: ${{ secrets.EMAIL_PASS }}
+          subject: "SAMS Policy Evaluation Completed"
+          to: ${{ secrets.EMAIL_TO }}
+          from: SAMS-Audit@system
+          body: "The nightly policy evaluation run has completed."
