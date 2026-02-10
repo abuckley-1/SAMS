@@ -1,0 +1,43 @@
+
+# ISO 9001 Control Manifest (YAML only)
+# Version: 2015
+# Clause: Planning
+# NOTE: This file paraphrases control intents; it does not reproduce standard text.
+# Fields: id, title, intent, criteria, evidence, frequency, owner, tags
+standard: "ISO 9001"
+version: "2015"
+clause: "Planning"
+controls:
+  - id: "QMS-6.1"
+    title: "Actions to address risks and opportunities"
+    intent: "Plan actions to address risks/opportunities and integrate into processes."
+    criteria:
+      - "Risk register maintained"
+      - "Action plans defined"
+    evidence:
+      - "risk_register.xlsx"
+    frequency: "quarterly"
+    owner: "Process Owner"
+    tags: ["SHEQ", "ISO 9001", "GitHub-Actions"]
+  - id: "QMS-6.2"
+    title: "Quality objectives and planning to achieve them"
+    intent: "Set measurable objectives and plans for achievement."
+    criteria:
+      - "SMART objectives"
+      - "Tracked KPIs"
+    evidence:
+      - "qms_objectives.csv"
+    frequency: "quarterly"
+    owner: "Process Owner"
+    tags: ["SHEQ", "ISO 9001", "GitHub-Actions"]
+  - id: "QMS-6.3"
+    title: "Planning changes"
+    intent: "Ensure planned changes are controlled."
+    criteria:
+      - "Change log maintained"
+      - "Impact assessed"
+    evidence:
+      - "change_log.csv"
+    frequency: "as-needed"
+    owner: "Process Owner"
+    tags: ["SHEQ", "ISO 9001", "GitHub-Actions"]

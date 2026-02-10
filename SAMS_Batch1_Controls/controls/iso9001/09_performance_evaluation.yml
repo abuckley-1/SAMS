@@ -1,0 +1,42 @@
+
+# ISO 9001 Control Manifest (YAML only)
+# Version: 2015
+# Clause: Performance evaluation
+# NOTE: This file paraphrases control intents; it does not reproduce standard text.
+# Fields: id, title, intent, criteria, evidence, frequency, owner, tags
+standard: "ISO 9001"
+version: "2015"
+clause: "Performance evaluation"
+controls:
+  - id: "QMS-9.1"
+    title: "Monitoring, measurement, analysis and evaluation"
+    intent: "Determine what, when, and how to monitor and measure."
+    criteria:
+      - "KPI reports"
+      - "Analysis documented"
+    evidence:
+      - "kpi_reports/"
+    frequency: "monthly"
+    owner: "Process Owner"
+    tags: ["SHEQ", "ISO 9001", "GitHub-Actions"]
+  - id: "QMS-9.2"
+    title: "Internal audit"
+    intent: "Plan, establish and conduct internal audits."
+    criteria:
+      - "Audit programme"
+      - "Findings tracked"
+    evidence:
+      - "audit_programme.xlsx"
+    frequency: "semiannual"
+    owner: "Process Owner"
+    tags: ["SHEQ", "ISO 9001", "GitHub-Actions"]
+  - id: "QMS-9.3"
+    title: "Management review"
+    intent: "Conduct management reviews at planned intervals."
+    criteria:
+      - "Inputs/outputs recorded"
+    evidence:
+      - "management_review_minutes.pdf"
+    frequency: "annual"
+    owner: "Process Owner"
+    tags: ["SHEQ", "ISO 9001", "GitHub-Actions"]

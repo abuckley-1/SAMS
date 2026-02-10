@@ -1,0 +1,51 @@
+
+# ISO 45001 Control Manifest (YAML only)
+# Version: 2018
+# Clause: Operation
+# NOTE: This file paraphrases control intents; it does not reproduce standard text.
+# Fields: id, title, intent, criteria, evidence, frequency, owner, tags
+standard: "ISO 45001"
+version: "2018"
+clause: "Operation"
+controls:
+  - id: "OHS-8.1.1"
+    title: "Operational planning and control"
+    intent: "Plan and control operations to manage OH&S risks."
+    criteria:
+      - "Controls implemented"
+    evidence:
+      - "ohs_operational_controls.yml"
+    frequency: "monthly"
+    owner: "Process Owner"
+    tags: ["SHEQ", "ISO 45001", "GitHub-Actions"]
+  - id: "OHS-8.1.2"
+    title: "Management of change"
+    intent: "Control changes affecting OH&S."
+    criteria:
+      - "Change assessments"
+    evidence:
+      - "ohs_moc_log.csv"
+    frequency: "as-needed"
+    owner: "Process Owner"
+    tags: ["SHEQ", "ISO 45001", "GitHub-Actions"]
+  - id: "OHS-8.1.3"
+    title: "Procurement"
+    intent: "Control procurement to manage OH&S risks."
+    criteria:
+      - "Supplier OH&S criteria"
+    evidence:
+      - "ohs_supplier_criteria.docx"
+    frequency: "annual"
+    owner: "Process Owner"
+    tags: ["SHEQ", "ISO 45001", "GitHub-Actions"]
+  - id: "OHS-8.2"
+    title: "Emergency preparedness and response"
+    intent: "Establish emergency plans and test them."
+    criteria:
+      - "Drill records"
+    evidence:
+      - "ohs_epr_plan.pdf"
+      - "epr_drill_log.csv"
+    frequency: "annual"
+    owner: "Process Owner"
+    tags: ["SHEQ", "ISO 45001", "GitHub-Actions"]

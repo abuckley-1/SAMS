@@ -1,0 +1,60 @@
+
+# ISO 45001 Control Manifest (YAML only)
+# Version: 2018
+# Clause: Planning
+# NOTE: This file paraphrases control intents; it does not reproduce standard text.
+# Fields: id, title, intent, criteria, evidence, frequency, owner, tags
+standard: "ISO 45001"
+version: "2018"
+clause: "Planning"
+controls:
+  - id: "OHS-6.1.1"
+    title: "Actions to address risks & opportunities"
+    intent: "Plan actions for risks/opportunities including legal requirements."
+    criteria:
+      - "Risk & opportunity plans"
+    evidence:
+      - "ohs_risk_register.xlsx"
+    frequency: "quarterly"
+    owner: "Process Owner"
+    tags: ["SHEQ", "ISO 45001", "GitHub-Actions"]
+  - id: "OHS-6.1.2.1"
+    title: "Hazard identification"
+    intent: "Proactively identify hazards."
+    criteria:
+      - "Hazard log current"
+    evidence:
+      - "hazard_log.csv"
+    frequency: "monthly"
+    owner: "Process Owner"
+    tags: ["SHEQ", "ISO 45001", "GitHub-Actions"]
+  - id: "OHS-6.1.2.2"
+    title: "Assessment of OH&S risks"
+    intent: "Assess OH&S risks and other risks to the MS."
+    criteria:
+      - "Methodology defined"
+    evidence:
+      - "risk_assessments/"
+    frequency: "quarterly"
+    owner: "Process Owner"
+    tags: ["SHEQ", "ISO 45001", "GitHub-Actions"]
+  - id: "OHS-6.1.3"
+    title: "Legal and other requirements"
+    intent: "Determine and keep up to date legal requirements."
+    criteria:
+      - "Legal register maintained"
+    evidence:
+      - "legal_register.xlsx"
+    frequency: "quarterly"
+    owner: "Process Owner"
+    tags: ["SHEQ", "ISO 45001", "GitHub-Actions"]
+  - id: "OHS-6.2"
+    title: "OH&S objectives and planning"
+    intent: "Set objectives and plan to achieve them."
+    criteria:
+      - "KPIs and action plans"
+    evidence:
+      - "ohs_objectives.csv"
+    frequency: "quarterly"
+    owner: "Process Owner"
+    tags: ["SHEQ", "ISO 45001", "GitHub-Actions"]

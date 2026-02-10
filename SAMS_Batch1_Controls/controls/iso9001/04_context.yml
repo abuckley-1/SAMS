@@ -1,0 +1,59 @@
+
+# ISO 9001 Control Manifest (YAML only)
+# Version: 2015
+# Clause: Context of the organisation
+# NOTE: This file paraphrases control intents; it does not reproduce standard text.
+# Fields: id, title, intent, criteria, evidence, frequency, owner, tags
+standard: "ISO 9001"
+version: "2015"
+clause: "Context of the organisation"
+controls:
+  - id: "QMS-4.1"
+    title: "Understanding the organisation and its context"
+    intent: "Define internal and external issues affecting the QMS."
+    criteria:
+      - "Context analysis documented"
+      - "Stakeholder needs identified"
+      - "Review frequency defined"
+    evidence:
+      - "context_register.csv"
+      - "stakeholder_matrix.xlsx"
+    frequency: "annual"
+    owner: "Process Owner"
+    tags: ["SHEQ", "ISO 9001", "GitHub-Actions"]
+  - id: "QMS-4.2"
+    title: "Understanding needs and expectations of interested parties"
+    intent: "Maintain current list of interested parties and their requirements."
+    criteria:
+      - "Parties identified"
+      - "Requirements tracked"
+      - "Updates controlled"
+    evidence:
+      - "interested_parties.yml"
+    frequency: "annual"
+    owner: "Process Owner"
+    tags: ["SHEQ", "ISO 9001", "GitHub-Actions"]
+  - id: "QMS-4.3"
+    title: "Scope of the QMS"
+    intent: "Define and maintain documented scope with justification for exclusions."
+    criteria:
+      - "Scope statement approved"
+      - "Exclusions justified"
+    evidence:
+      - "qms_scope.md"
+    frequency: "annual"
+    owner: "Process Owner"
+    tags: ["SHEQ", "ISO 9001", "GitHub-Actions"]
+  - id: "QMS-4.4"
+    title: "QMS and its processes"
+    intent: "Map processes, inputs/outputs, criteria, interactions, and responsibilities."
+    criteria:
+      - "Process map maintained"
+      - "KPIs defined"
+      - "Interactions documented"
+    evidence:
+      - "process_map.drawio"
+      - "kpi_register.csv"
+    frequency: "annual"
+    owner: "Process Owner"
+    tags: ["SHEQ", "ISO 9001", "GitHub-Actions"]

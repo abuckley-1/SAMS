@@ -1,0 +1,60 @@
+
+# ISO 14001 Control Manifest (YAML only)
+# Version: 2015
+# Clause: Support
+# NOTE: This file paraphrases control intents; it does not reproduce standard text.
+# Fields: id, title, intent, criteria, evidence, frequency, owner, tags
+standard: "ISO 14001"
+version: "2015"
+clause: "Support"
+controls:
+  - id: "EMS-7.1"
+    title: "Resources"
+    intent: "Provide EMS resources."
+    criteria:
+      - "Budget & people assigned"
+    evidence:
+      - "ems_resource_plan.xlsx"
+    frequency: "annual"
+    owner: "Process Owner"
+    tags: ["SHEQ", "ISO 14001", "GitHub-Actions"]
+  - id: "EMS-7.2"
+    title: "Competence"
+    intent: "Ensure competence for EMS roles."
+    criteria:
+      - "Training records"
+    evidence:
+      - "ems_training_matrix.csv"
+    frequency: "quarterly"
+    owner: "Process Owner"
+    tags: ["SHEQ", "ISO 14001", "GitHub-Actions"]
+  - id: "EMS-7.3"
+    title: "Awareness"
+    intent: "Ensure awareness of policy/aspects."
+    criteria:
+      - "Toolbox talks held"
+    evidence:
+      - "awareness_log.csv"
+    frequency: "annual"
+    owner: "Process Owner"
+    tags: ["SHEQ", "ISO 14001", "GitHub-Actions"]
+  - id: "EMS-7.4"
+    title: "Communication"
+    intent: "Plan internal/external communications."
+    criteria:
+      - "Comms plan"
+    evidence:
+      - "ems_comms_plan.docx"
+    frequency: "annual"
+    owner: "Process Owner"
+    tags: ["SHEQ", "ISO 14001", "GitHub-Actions"]
+  - id: "EMS-7.5"
+    title: "Documented information"
+    intent: "Control EMS documents and records."
+    criteria:
+      - "Doc controls applied"
+    evidence:
+      - "ems_document_register.csv"
+    frequency: "monthly"
+    owner: "Process Owner"
+    tags: ["SHEQ", "ISO 14001", "GitHub-Actions"]

@@ -1,0 +1,50 @@
+
+# ISO 45001 Control Manifest (YAML only)
+# Version: 2018
+# Clause: Performance evaluation
+# NOTE: This file paraphrases control intents; it does not reproduce standard text.
+# Fields: id, title, intent, criteria, evidence, frequency, owner, tags
+standard: "ISO 45001"
+version: "2018"
+clause: "Performance evaluation"
+controls:
+  - id: "OHS-9.1.1"
+    title: "Monitoring, measurement, analysis and performance evaluation"
+    intent: "Monitor and measure OH&S performance."
+    criteria:
+      - "Monitoring plan and KPIs"
+    evidence:
+      - "ohs_kpi_reports/"
+    frequency: "monthly"
+    owner: "Process Owner"
+    tags: ["SHEQ", "ISO 45001", "GitHub-Actions"]
+  - id: "OHS-9.1.2"
+    title: "Evaluation of compliance"
+    intent: "Evaluate compliance with legal and other requirements."
+    criteria:
+      - "Compliance evaluations"
+    evidence:
+      - "ohs_compliance_reports/"
+    frequency: "semiannual"
+    owner: "Process Owner"
+    tags: ["SHEQ", "ISO 45001", "GitHub-Actions"]
+  - id: "OHS-9.2"
+    title: "Internal audit"
+    intent: "Plan and conduct OH&SMS audits."
+    criteria:
+      - "Audit schedule and findings"
+    evidence:
+      - "ohs_audit_schedule.xlsx"
+    frequency: "annual"
+    owner: "Process Owner"
+    tags: ["SHEQ", "ISO 45001", "GitHub-Actions"]
+  - id: "OHS-9.3"
+    title: "Management review"
+    intent: "Conduct OH&S management reviews."
+    criteria:
+      - "Inputs/outputs recorded"
+    evidence:
+      - "ohs_mgmt_review_minutes.pdf"
+    frequency: "annual"
+    owner: "Process Owner"
+    tags: ["SHEQ", "ISO 45001", "GitHub-Actions"]

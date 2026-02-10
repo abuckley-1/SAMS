@@ -1,0 +1,43 @@
+
+# RM3 Control Manifest (YAML only)
+# Version: 2019
+# Clause: PI
+# NOTE: This file paraphrases control intents; it does not reproduce standard text.
+# Fields: id, title, intent, criteria, evidence, frequency, owner, tags
+standard: "RM3"
+version: "2019"
+clause: "PI"
+controls:
+  - id: "RM3-PI1"
+    title: "Monitoring & measurement"
+    intent: "Collect, analyse and report performance data."
+    criteria:
+      - "KPI dashboards"
+      - "Trend analyses"
+    evidence:
+      - "pi_reports/"
+    frequency: "monthly"
+    owner: "Process Owner"
+    tags: ["SHEQ", "RM3", "GitHub-Actions"]
+  - id: "RM3-PI2"
+    title: "Incident reporting & learning"
+    intent: "Report, investigate, and learn from events."
+    criteria:
+      - "Investigations completed"
+      - "Learning shared"
+    evidence:
+      - "incident_log.csv"
+      - "lessons_learned.csv"
+    frequency: "as-needed"
+    owner: "Process Owner"
+    tags: ["SHEQ", "RM3", "GitHub-Actions"]
+  - id: "RM3-PI3"
+    title: "Audit & review"
+    intent: "Planned audits and management reviews."
+    criteria:
+      - "Audit findings closed"
+    evidence:
+      - "audit_schedule.xlsx"
+    frequency: "annual"
+    owner: "Process Owner"
+    tags: ["SHEQ", "RM3", "GitHub-Actions"]
