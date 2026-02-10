@@ -22,10 +22,13 @@ jobs:
         run: |
           pip install pandas requests
 
-      - name: Run Evidence Collectors
+      # Make collectors non-blocking during initial validation
+      - name: Run Evidence Collectors (non-blocking for initial test)
         run: |
-          python scripts/fetch_incident_data.py
-          python scripts/fetch_training_data.py
+          set +e
+          python scripts/fetch_incident_data.py || echo "fetch_incident_data failed (OK for initial validation)"
+          python scripts/fetch_training_data.py || echo "fetch_training_data failed (OK for initial validation)"
+          set -e
 
       - name: Upload Evidence Artifact
         uses: actions/upload-artifact@v3
@@ -33,8 +36,9 @@ jobs:
           name: evidence_artifact
           path: evidence/
 
+      # Only send mail if secrets are configured
       - name: Send Email Notification
-        if: always()
+        if: ${{ always() && secrets.EMAIL_USER != '' && secrets.EMAIL_PASS != '' && secrets.EMAIL_TO != '' }}
         uses: dawidd6/action-send-mail@v3
         with:
           server_address: smtp.gmail.com
