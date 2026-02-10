@@ -1,0 +1,54 @@
+# Verbose Enterprise GitHub Pages Deployment Workflow with Email Notifications
+name: GitHub Pages Deployment
+on:
+  schedule:
+    - cron: "45 4 * * *"
+  workflow_dispatch:
+
+jobs:
+  deploy-pages:
+    name: Deploy Dashboard to GitHub Pages
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v3
+
+      - name: Setup Pages
+        uses: actions/configure-pages@v3
+
+      - name: Download Dashboard JSON Artifact
+        uses: actions/download-artifact@v3
+        with:
+          name: dashboard_json
+          path: dashboard/output
+
+      - name: Copy Dashboard Files
+        run: |
+          mkdir -p public/dashboard
+          cp -R dashboard/index.html public/dashboard/
+          cp -R dashboard/style.css public/dashboard/
+          cp -R dashboard/status.js public/dashboard/
+          cp -R dashboard/output/*.json public/dashboard/
+
+      - name: Upload GitHub Pages Artifact
+        uses: actions/upload-pages-artifact@v2
+        with:
+          path: public
+
+      - name: Deploy to GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v2
+
+      - name: Send Email Notification
+        if: always()
+        uses: dawidd6/action-send-mail@v3
+        with:
+          server_address: smtp.gmail.com
+          server_port: 587
+          username: ${{ secrets.EMAIL_USER }}
+          password: ${{ secrets.EMAIL_PASS }}
+          subject: "SAMS Dashboard Deployment Completed"
+          to: ${{ secrets.EMAIL_TO }}
+          from: SAMS-Audit@system
+          body: "The dashboard has been successfully deployed to GitHub Pages."
