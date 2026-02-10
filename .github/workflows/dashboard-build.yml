@@ -1,0 +1,48 @@
+# Verbose Enterprise Dashboard Build Workflow with Email Notifications
+name: Dashboard Build Pipeline
+on:
+  schedule:
+    - cron: "15 4 * * *"
+  workflow_dispatch:
+
+jobs:
+  dashboard-build:
+    name: Build Compliance Dashboard
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v3
+
+      - name: Setup Python
+        uses: actions/setup-python@v4
+        with:
+          python-version: '3.10'
+
+      - name: Install dependencies
+        run: |
+          pip install pandas json5
+
+      - name: Generate Dashboard JSON
+        run: |
+          mkdir -p dashboard/output
+          python scripts/build_dashboard_json.py
+
+      - name: Upload Dashboard JSON Artifact
+        uses: actions/upload-artifact@v3
+        with:
+          name: dashboard_json
+          path: dashboard/output/
+
+      - name: Send Email Notification
+        if: always()
+        uses: dawidd6/action-send-mail@v3
+        with:
+          server_address: smtp.gmail.com
+          server_port: 587
+          username: ${{ secrets.EMAIL_USER }}
+          password: ${{ secrets.EMAIL_PASS }}
+          subject: "SAMS Dashboard Build Completed"
+          to: ${{ secrets.EMAIL_TO }}
+          from: SAMS-Audit@system
+          body: "The nightly dashboard build has completed."
