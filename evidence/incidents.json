@@ -1,0 +1,16 @@
+[
+  {
+    "id": "INC-001",
+    "date": "2026-01-15",
+    "type": "Near Miss",
+    "severity": "Low",
+    "status": "Closed"
+  },
+  {
+    "id": "INC-002",
+    "date": "2026-02-01",
+    "type": "Injury",
+    "severity": "Medium",
+    "status": "Open"
+  }
+]
